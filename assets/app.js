@@ -12,12 +12,27 @@ $(document).ready(function () {
 
     var database = firebase.database();
 
+    var name;
+    var destination;
+    var firstTrain;
+    var frequency = 0;
+
     $("#button").on("click", function (event) {
         event.preventDefault();
-        $(".trainData").val('');
+        name = $("#train-name").val().trim();
+        destination = $("#destination").val().trim();
+        firstTrain = $("#first-train").val().trim();
+        frequency = $("#frequency").val().trim();
 
-        var trainVal = $
-        var newTrain = $("<tr></tr>")
+        // Pushing to database
+        database.ref().push({
+            name: name,
+            destination: destination,
+            firstTrain: firstTrain,
+            frequency: frequency,
+            dateAdded: firebase.database.ServerValue.TIMESTAMP
+        });
+        $(".trainData").val('');
     });
 
 })

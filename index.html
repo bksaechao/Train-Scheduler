@@ -27,34 +27,29 @@
                     <th>Minutes Away</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>Thomas</td>
-                    <td>Portland</td>
-                    <td>30hz/min</td>
-                    <td>6:30pm</td>
-                    <td>5 minutes away</td>
-                </tr>
+            <tbody id="listT">
             </tbody>
         </table>
 
         <p class="addt">Add Train</p>
         <form>
             <label>Train Name</label>
-            <input class="trainData" type="text">
+            <input id="train-name" class="trainData" type="text">
             <label>Destination</label>
-            <input class="trainData" type="text">
+            <input id="destination" class="trainData" type="text">
             <label>First Train Time (HH:mm-military time)</label>
-            <input class="trainData" type="text">
+            <input id="first-train" class="trainData" type="text">
             <label>Frequency (min)</label>
-            <input class="trainData" type="text">
+            <input id="frequency" class="trainData" type="text">
             <input id="button" type="submit">
         </form>
     </div>
+
     <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-database.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
     <script src="assets/app.js"></script>
 </body>
