@@ -35,4 +35,14 @@ $(document).ready(function () {
         $(".trainData").val('');
     });
 
+    database.ref().on("child_added", function (childSnapshot) {
+        console.log("+- calling child_added");
+
+        $("#listT").append("<tr><td>" + childSnapshot.val().name +
+            "</td><td>" + childSnapshot.val().destination +
+            "</td><td>" + childSnapshot.val().frequency + "</tr></td>");
+    }), function (errorObject) {
+        console.log("Errors handled: " + errorObject.code);
+    }
+
 })
