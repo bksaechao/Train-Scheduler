@@ -29,7 +29,7 @@ table {
     margin-bottom: 20px;
 }
 
-th, td {
+th,td {
     border-bottom: 1px solid black;
     padding: 5px;
 }
@@ -42,11 +42,18 @@ th {
     margin: auto;
 }
 
+#btn {
+    margin: 5px 3px;
+    background-color: rgb(34, 77, 133);
+    color: white;
+}
+
 form {
     border: 2px solid black;
     padding: 5px;
 }
-input {
+
+.trainData {
     width: 98%;
     margin: 5px 3px;
 }
