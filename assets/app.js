@@ -46,7 +46,7 @@ $(document).ready(function () {
         var minAway = tMinutesTillTrain;
         // Next train time
         var nextTrain = moment().add(tMinutesTillTrain, "minutes");
-        var newTrain = moment(nextTrain).format("hh:mm");
+        var newTrain = moment(nextTrain).format("hh:mm A");
         console.log(tMinutesTillTrain);
 
         // Pushing to database
